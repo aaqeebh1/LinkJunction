@@ -1,17 +1,67 @@
+.profile__page {
+  display: flex;
+}
 
-
-iframe {
+.profile__section {
+  flex: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile__section--image{
+    margin:  50px 0;
+}
+.profile__image{
     
+    border-radius: 50%;
+}
+.profile__section--social-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social-link{
+    margin: 10px;
+}
+
+
+/* Other link section */
+.other-links__section {
+  flex: 80%;
+}
+.other__links--wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+.other-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .link__preview {
-    height: 600px;
-    width: 400px;
-    pointer-events: none;
-    scrollbar-width: 0;
+  position: relative;
+  height: 400px;
+  width: 400px;
+  pointer-events: none;
+}
+.link__preview--wrapper {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  transition: border-radius 0.5s ease-out;
+  z-index: 2;
+  overflow: hidden;
 }
 
-.other-link__title {
-    font-size: 32px;
-    text-decoration: none;
+.link__preview--wrapper:hover {
+  border-radius: 10%;
+}
+
+.link__title {
+  font-size: 32px;
+  text-decoration: none;
 }
